@@ -325,12 +325,30 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Method</h2>
+          <h2 class="title is-3">Introduction</h2>
          <p>
-              <img src="static/images/overview.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" loading="lazy">
+              <img src="static/images/intro_eccv.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" loading="lazy">
             </p>
             <p>
-                  The overview of our proposed OccTrans, which includes a geometric aggregated tokenizer and a world transitions modeling module. The tokenizer, with an encoder-decoder architecture, discretizes the scene into tokens on the BEV plane. The world transition modeling module predicts future tokens from past ones by modeling temporal warping and dynamics, and comprises three components: hierarchical spatial attention, temporal warping, and a dynamic world model.
+                  Comparison of feed-forward 3D Gaussian Splatting methods. (a, b) Prior works rely on either pixel- or voxel-based predictors. (c) OmniScene combines both but suffers from redundant Gaussians. (d) Our FocusGS introduces targeted structure completion based on pixel-based features, achieving high-fidelity reconstruction with minimal Gaussian overhead.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Method</h2>
+         <p>
+              <img src="static/images/overview_eccv.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" loading="lazy">
+            </p>
+            <p>
+                  The overall pipeline of FocusGS. Given sparse multi-view images, we first generate a pixel-aligned base Gaussian representation for continuous visible surfaces. To handle occlusions and depth discontinuities, we explicitly localize regions of high uncertainty by constructing a geometric ambiguity manifold. A targeted structure completion module then initializes and optimizes Gaussian queries exclusively within this derived 3D uncertainty subspace, naturally bridging the gap between pixel-based efficiency and volumetric structural completeness.
             </p>
         </div>
       </div>
